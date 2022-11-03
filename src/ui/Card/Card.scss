@@ -1,0 +1,18 @@
+@use '../../mixin.scss' as mixin;
+
+.card {
+  border: 2px solid;
+  max-width: 284.33px;
+  border-radius: 8px;
+}
+
+.card--starter {
+  border-color: #dae9ef;
+  padding: 16px;
+}
+
+.card--pro {
+  border-color: mixin.$black-color;
+  padding: 40px;
+  background-color: mixin.$primary-color;
+}

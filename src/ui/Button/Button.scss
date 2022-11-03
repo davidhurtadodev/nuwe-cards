@@ -1,0 +1,22 @@
+@use '../../mixin.scss' as mixin;
+.button {
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.card__button {
+  width: 100%;
+  border-radius: 8px;
+  padding: 12px 0;
+  border: 0;
+}
+
+.card__button--starter {
+  background: mixin.$white-color;
+  border: 1px solid mixin.$primary-color;
+}
+.card__button--pro {
+  background: mixin.$black-color;
+  color: mixin.$white-color;
+}

@@ -1,0 +1,23 @@
+@use '../../mixin.scss' as mixin;
+
+.card__img-container {
+  margin-bottom: 16px;
+}
+
+.plan-wrapper__name {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.plan-wrapper__price {
+  font-weight: 700;
+  font-size: 24px;
+}
+.plan-wrapper__time {
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.card__plan-wrapper {
+  margin-bottom: 16px;
+}

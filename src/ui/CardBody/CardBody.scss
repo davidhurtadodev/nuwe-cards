@@ -1,0 +1,43 @@
+@use '../../mixin.scss' as mixin;
+.card__list {
+  list-style-type: none;
+  // padding-left: 10px;
+  margin-bottom: 16px;
+}
+.card__li {
+  position: relative;
+  font-weight: 300;
+  font-size: 14px;
+  margin-bottom: 16px;
+  // background-image: url(../../assets/icons/Vector.svg);
+  // background-position: 0 0;
+  // background-repeat: no-repeat;
+  // padding-left: 10px;
+  margin-left: 24px;
+}
+.card__li-starter--inactive {
+  opacity: 0.2;
+}
+.card__li-pro--inactive {
+  opacity: 0.5;
+  color: mixin.$white-color;
+}
+.card__li-pro {
+  color: mixin.$white-color;
+}
+
+.card__li:before {
+  content: '';
+  position: absolute;
+  background-image: url(../../assets/icons/Vector.svg);
+  background-size: cover;
+  background-position: center;
+  left: -24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 11.73px;
+  height: 8.94px;
+}
+.card__li-pro.card__li::before {
+  background-image: url('../../assets/icons/Vector-white.svg');
+}
