@@ -10,7 +10,16 @@ function App() {
       service.name === 'Cooking recipes' ||
       service.name === 'Guided meditations' ||
       service.name === 'Mindfulness exercises' ||
-      service.name === 'Sleep podcast and exercises'
+      service.name === 'Sleep podcasts and exercises'
+    ) {
+      return { name: service.name, included: !service.included };
+    }
+    return service;
+  });
+  const proServices = services.map((service) => {
+    if (
+      service.name === 'Cooking recipes' ||
+      service.name === 'Guided meditations'
     ) {
       return { name: service.name, included: !service.included };
     }
@@ -19,7 +28,11 @@ function App() {
 
   return (
     <>
-      <AppUI starterServices={starterServices} />
+      <AppUI
+        services={services}
+        starterServices={starterServices}
+        proServices={proServices}
+      />
     </>
   );
 }
