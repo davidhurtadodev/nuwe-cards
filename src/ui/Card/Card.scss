@@ -8,11 +8,35 @@
 
 .card--starter {
   border-color: #dae9ef;
-  padding: 16px;
+  padding: 16px 0;
 }
 
 .card--pro {
   border-color: mixin.$black-color;
-  padding: 40px;
+  padding: 40px 0;
   background-color: mixin.$primary-color;
+}
+.card--teams {
+  border-color: #dae9ef;
+  padding: 48px 0;
+}
+.card__body-header-container--pro {
+  padding: 0 40px;
+}
+
+.card__body-header-container--starter {
+  padding: 0 16px;
+}
+.card__body-header-container--teams {
+  padding: 0 48px;
+}
+
+.card__button-container--teams {
+  padding: 0 48px;
+}
+.card__button-container--starter {
+  padding: 0 16px;
+}
+.card__button-container--pro {
+  padding: 0 40px;
 }

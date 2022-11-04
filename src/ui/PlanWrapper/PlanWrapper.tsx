@@ -7,21 +7,18 @@ interface PlanWrapperProps {
 }
 
 export const PlanWrapper = ({
-  pro,
-  starter,
-  teams,
   planName,
   price,
 }: PlanWrapperProps & classNameBooleans) => {
   const cardPlanWrapperClasses = classNames('plan-wrapper card__plan-wrapper', {
-    'card__plan-wrapper--pro': pro,
-    'card__plan-wrapper--starter': starter,
-    'card__plan-wrapper--teams': teams,
+    [`card__plan-wrapper--${planName}`]: true,
   });
 
   return (
     <div className={cardPlanWrapperClasses}>
-      <span className="plan-wrapper__name">{planName}</span>
+      <span className="plan-wrapper__name">{`${planName
+        .charAt(0)
+        .toUpperCase()}${planName.slice(1)}`}</span>
       <h2 className="plan-wrapper__price">{price}</h2>
       <span className="plan-wrapper__time">per month</span>
     </div>

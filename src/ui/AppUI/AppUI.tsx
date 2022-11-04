@@ -6,6 +6,11 @@ import { PlanWrapper } from '../PlanWrapper';
 
 import freeImg from '../../assets/free.svg';
 import proImg from '../../assets/pro.svg';
+import teamLeft from '../../assets/teams-left.svg';
+import teamMiddle from '../../assets/teams-middle.svg';
+import teamRight from '../../assets/teams-right.svg';
+
+import './AppUI.scss';
 
 interface AppUIProps {
   starterServices: {
@@ -22,6 +27,33 @@ interface AppUIProps {
   }[];
 }
 
+const starterImgArray = [
+  {
+    src: freeImg,
+    alt: 'Starter',
+  },
+];
+const proImgArray = [
+  {
+    src: proImg,
+    alt: 'Pro',
+  },
+];
+const teamsImgArray = [
+  {
+    src: teamLeft,
+    alt: 'Teams',
+  },
+  {
+    src: teamMiddle,
+    alt: 'Teams',
+  },
+  {
+    src: teamRight,
+    alt: 'Teams',
+  },
+];
+
 export const AppUI = ({
   starterServices,
   proServices,
@@ -29,30 +61,33 @@ export const AppUI = ({
 }: AppUIProps): JSX.Element => {
   return (
     <div className="app-ui">
-      <Card starter>
-        <CardHeader img={freeImg} altImg="Free">
-          <PlanWrapper starter planName="Starter" price="Free" />
-        </CardHeader>
-        <CardBody starter services={starterServices} />
+      <Card
+        services={starterServices}
+        imgArray={starterImgArray}
+        planName="starter"
+        price="Free"
+      >
         <Button card starter>
           Get Started
         </Button>
       </Card>
-      <Card pro>
-        <CardHeader img={proImg} altImg="Pro">
-          <PlanWrapper pro planName="Pro" price="$49" />
-        </CardHeader>
-        <CardBody pro services={proServices} />
+      <Card
+        services={proServices}
+        imgArray={proImgArray}
+        planName="pro"
+        price="$49"
+      >
         <Button card pro>
           Become a Pro
         </Button>
       </Card>
-      <Card teams>
-        <CardHeader img={freeImg} altImg="Teams">
-          <PlanWrapper teams planName="Teams" price="$99" />
-        </CardHeader>
-        <CardBody pro services={services} />
-        <Button card pro>
+      <Card
+        services={services}
+        imgArray={teamsImgArray}
+        planName="teams"
+        price="$99"
+      >
+        <Button card teams>
           Get Teams
         </Button>
       </Card>
