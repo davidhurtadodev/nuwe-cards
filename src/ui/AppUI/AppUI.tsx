@@ -1,10 +1,9 @@
 import { Card } from '../Card';
 import { Button } from '../Button';
+
 import freeImg from '../../assets/free.svg';
 import proImg from '../../assets/pro.svg';
-import teamLeft from '../../assets/teams-left.svg';
-import teamMiddle from '../../assets/teams-middle.svg';
-import teamRight from '../../assets/teams-right.svg';
+import teams from '../../assets/teams.svg';
 
 import './AppUI.scss';
 
@@ -23,32 +22,19 @@ interface AppUIProps {
   }[];
 }
 
-const starterImgArray = [
-  {
-    src: freeImg,
-    alt: 'Starter',
-  },
-];
-const proImgArray = [
-  {
-    src: proImg,
-    alt: 'Pro',
-  },
-];
-const teamsImgArray = [
-  {
-    src: teamLeft,
-    alt: 'Teams',
-  },
-  {
-    src: teamMiddle,
-    alt: 'Teams',
-  },
-  {
-    src: teamRight,
-    alt: 'Teams',
-  },
-];
+const starterImgObj = {
+  src: freeImg,
+  alt: 'Starter',
+};
+const proImgObj = {
+  src: proImg,
+  alt: 'Pro',
+};
+
+const teamsImgObj = {
+  src: teams,
+  alt: 'Teams',
+};
 
 export const AppUI = ({
   starterServices,
@@ -59,7 +45,7 @@ export const AppUI = ({
     <div className="app-ui">
       <Card
         services={starterServices}
-        imgArray={starterImgArray}
+        imgObj={starterImgObj}
         planName="starter"
         price="Free"
       >
@@ -69,7 +55,7 @@ export const AppUI = ({
       </Card>
       <Card
         services={proServices}
-        imgArray={proImgArray}
+        imgObj={proImgObj}
         planName="pro"
         price="$49"
       >
@@ -79,7 +65,7 @@ export const AppUI = ({
       </Card>
       <Card
         services={services}
-        imgArray={teamsImgArray}
+        imgObj={teamsImgObj}
         planName="teams"
         price="$99"
       >

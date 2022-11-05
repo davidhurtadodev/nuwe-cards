@@ -1,15 +1,11 @@
 import classNames from 'classnames';
-import { classNameBooleans } from '../../shared/interface/classNames.interface';
 
 interface PlanWrapperProps {
   planName: string;
   price: string;
 }
 
-export const PlanWrapper = ({
-  planName,
-  price,
-}: PlanWrapperProps & classNameBooleans) => {
+export const PlanWrapper = ({ planName, price }: PlanWrapperProps) => {
   const cardPlanWrapperClasses = classNames('plan-wrapper card__plan-wrapper', {
     [`card__plan-wrapper--${planName}`]: true,
   });

@@ -1,13 +1,14 @@
 import classNames from 'classnames';
+
 import { CardHeader } from '../CardHeader';
 import { CardBody } from '../CardBody';
 import { PlanWrapper } from '../PlanWrapper';
-import { Button } from '../Button';
+
 import './Card.scss';
 
 interface CardProps {
   children?: React.ReactNode;
-  imgArray: { src: string; alt: string }[];
+  imgObj: { src: string; alt: string };
   starter?: boolean;
   pro?: boolean;
   teams?: boolean;
@@ -20,9 +21,8 @@ interface CardProps {
 }
 
 export const Card = ({
-  imgArray,
+  imgObj,
   services,
-
   price,
   planName,
   children,
@@ -44,7 +44,7 @@ export const Card = ({
   return (
     <div className={cardClasses}>
       <div className={cardBodyHeaderContainerClasses}>
-        <CardHeader planName={planName} imgArray={imgArray}>
+        <CardHeader planName={planName} imgObj={imgObj}>
           <PlanWrapper planName={planName} price={price} />
         </CardHeader>
         <CardBody services={services} planName={planName} />

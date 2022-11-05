@@ -1,9 +1,10 @@
 import classNames from 'classnames';
+import { isArgumentsObject } from 'util/types';
 import { PlanWrapper } from '../PlanWrapper';
 import './CardHeader.scss';
 
 interface CardHeaderProps {
-  imgArray: { src: string; alt: string }[];
+  imgObj: { src: string; alt: string };
   starter?: boolean;
   pro?: boolean;
   teams?: boolean;
@@ -12,26 +13,18 @@ interface CardHeaderProps {
 }
 
 export const CardHeader = ({
-  imgArray,
+  imgObj,
   planName,
-  starter,
-  pro,
-  teams,
   children,
 }: CardHeaderProps): JSX.Element => {
   const cardHeaderClasses = classNames('card__header', {
-    // 'card__header--pro': pro,
-    // 'card__header--starter': starter,
-    // 'card__header--teams': teams,
     [`card__header--${planName}`]: true,
   });
 
   return (
     <div className={cardHeaderClasses}>
       <div className="card__img-container">
-        {imgArray.map(({ src, alt }) => {
-          return <img src={src} alt={alt} />;
-        })}
+        <img src={imgObj.src} alt={imgObj.alt} />
       </div>
       {children}
     </div>

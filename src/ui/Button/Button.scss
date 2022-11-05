@@ -13,15 +13,28 @@
   border-radius: 8px;
   padding: 12px 0;
   border: 0;
-  &__button--starter {
+  &--starter {
     background: mixin.$white-color;
     border: 1px solid mixin.$primary-color;
+    &:hover {
+      background: mixin.$primary-color;
+      color: mixin.$white-color;
+      border-color: mixin.$black-color;
+    }
   }
-  &__button--pro {
+  &--pro {
     background: mixin.$black-color;
     color: mixin.$white-color;
+    &:hover {
+      background: #323232;
+    }
   }
-  &__button--teams {
+  &--teams {
     margin-right: 21.33px;
+    background: mixin.$primary-color;
+    color: mixin.$white-color;
+    &:hover {
+      background: #7a6af4;
+    }
   }
 }
