@@ -1,9 +1,5 @@
 import { Card } from '../Card';
-import { CardHeader } from '../CardHeader/';
-import { CardBody } from '../CardBody';
 import { Button } from '../Button';
-import { PlanWrapper } from '../PlanWrapper';
-
 import freeImg from '../../assets/free.svg';
 import proImg from '../../assets/pro.svg';
 import teamLeft from '../../assets/teams-left.svg';
