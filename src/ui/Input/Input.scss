@@ -1,0 +1,19 @@
+@use '../../mixin.scss' as mixin;
+
+.input {
+  font-size: 18px;
+  border-radius: 7px;
+  padding: 5px;
+  border: solid 1px mixin.$black-color;
+  width: 100%;
+  &:focus {
+    border-color: mixin.$primary-color;
+  }
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 4px;
+}
