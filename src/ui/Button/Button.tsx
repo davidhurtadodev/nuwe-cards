@@ -1,18 +1,9 @@
 import classNames from 'classnames';
+
+import { ButtonProps } from '../../shared/interface/ButtonProps.interface';
+
 import './Button.scss';
 
-interface ButtonProps {
-  customBlock: string;
-  customModifier?: string;
-  children?: React.ReactNode;
-  card?: boolean;
-  pro?: boolean;
-  starter?: boolean;
-  teams?: boolean;
-  modal?: boolean;
-  onClick?: () => void;
-  type: 'button' | 'submit' | 'reset' | undefined;
-}
 export const Button = ({
   children,
   pro,

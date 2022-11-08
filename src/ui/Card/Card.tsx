@@ -4,21 +4,9 @@ import { CardHeader } from '../CardHeader';
 import { CardBody } from '../CardBody';
 import { PlanWrapper } from '../PlanWrapper';
 
-import './Card.scss';
+import { CardProps } from '../../shared/interface/CardProps.interface';
 
-interface CardProps {
-  children?: React.ReactNode;
-  imgObj: { src: string; alt: string };
-  starter?: boolean;
-  pro?: boolean;
-  teams?: boolean;
-  services: {
-    name: string;
-    included: boolean;
-  }[];
-  price: string;
-  planName: string;
-}
+import './Card.scss';
 
 export const Card = ({
   imgObj,

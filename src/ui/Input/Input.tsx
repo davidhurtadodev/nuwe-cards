@@ -1,14 +1,9 @@
 import classNames from 'classnames';
 
+import { InputProps } from '../../shared/interface/InputProps.interface';
+
 import './Input.scss';
 
-interface InputProps {
-  customContainer?: string;
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  type: string;
-  label?: string;
-  name?: string;
-}
 export const Input = ({
   type,
   onChange,
@@ -27,9 +22,11 @@ export const Input = ({
   });
   return (
     <div className={inputContainerClasses}>
-      <label htmlFor={name} className={labelClasses}>
-        {label}
-      </label>
+      {label ? (
+        <label htmlFor={name} className={labelClasses}>
+          {label}
+        </label>
+      ) : null}
       <input name={name} className={inputClasses} type={type} />
     </div>
   );

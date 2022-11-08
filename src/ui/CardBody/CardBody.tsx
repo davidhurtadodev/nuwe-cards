@@ -1,23 +1,9 @@
 import './CardBody.scss';
 import classNames from 'classnames';
-interface CardBodyProps {
-  starter?: boolean;
-  planName: string;
-  pro?: boolean;
-  teams?: boolean;
-  services: {
-    name: string;
-    included: boolean;
-  }[];
-}
 
-export const CardBody = ({
-  services,
-  starter,
-  pro,
-  teams,
-  planName,
-}: CardBodyProps) => {
+import { CardBodyProps } from '../../shared/interface/CardBodyProps.interface';
+
+export const CardBody = ({ services, planName }: CardBodyProps) => {
   return (
     <div className="card__body">
       <ul className="card__list">

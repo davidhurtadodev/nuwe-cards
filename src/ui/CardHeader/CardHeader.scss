@@ -6,24 +6,3 @@
 .card__img-container {
   margin-bottom: 16px;
 }
-.plan-wrapper {
-  &__name {
-    font-size: 12px;
-    font-weight: 300;
-  }
-  &__price {
-    font-weight: 700;
-    font-size: 24px;
-  }
-  &__time {
-    font-weight: 300;
-    font-size: 12px;
-    color: #5f6974;
-  }
-  .card__plan-wrapper--pro &__time {
-    color: mixin.$white-color;
-  }
-}
-.card__plan-wrapper--pro {
-  color: mixin.$white-color;
-}

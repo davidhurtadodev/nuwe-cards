@@ -3,31 +3,20 @@ import { useEffect } from 'react';
 import { Card } from '../Card';
 import { Button } from '../Button';
 import { Modal } from '../Modal';
-import { Input } from '../Input';
+
+import {
+  starterServices,
+  proServices,
+  teamServices,
+} from '../../application/services';
 
 import freeImg from '../../assets/free.svg';
 import proImg from '../../assets/pro.svg';
 import teams from '../../assets/teams.svg';
-import closeIcon from '../../assets/icons/xmark-solid.svg';
+
+import { AppUIProps } from '../../shared/interface/AppUIProps.interface';
 
 import './AppUI.scss';
-
-interface AppUIProps {
-  starterServices: {
-    name: string;
-    included: boolean;
-  }[];
-  proServices: {
-    name: string;
-    included: boolean;
-  }[];
-  services: {
-    name: string;
-    included: boolean;
-  }[];
-  showModal: boolean;
-  setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
-}
 
 const starterImgObj = {
   src: freeImg,
@@ -43,65 +32,22 @@ const teamsImgObj = {
   alt: 'Teams',
 };
 
-export const AppUI = ({
-  starterServices,
-  proServices,
-  services,
-  showModal,
-  setShowModal,
-}: AppUIProps): JSX.Element => {
+export const AppUI = ({ showModal, setShowModal }: AppUIProps): JSX.Element => {
   useEffect(() => {
     if (showModal) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflowY = 'hidden';
+      document.body.style.height = '100%';
     }
     if (!showModal) {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflowY = 'auto';
+      document.body.style.height = 'auto';
     }
   }, [showModal]);
+
   return (
-    <div
-      style={showModal ? { overflow: 'hidden' } : { overflow: 'auto' }}
-      className="app-ui"
-    >
+    <div className="app-ui">
       {showModal ? (
-        <Modal>
-          <img
-            onClick={() => setShowModal(!showModal)}
-            src={closeIcon}
-            className="modal__close-icon"
-          />
-          <p className="modal__text">
-            Enter your email for further information
-          </p>
-          <form>
-            <Input
-              label="Email"
-              name="email"
-              type="email"
-              customContainer="modal"
-            />
-            <div className="modal__button-container">
-              <Button
-                onClick={() => setShowModal(!showModal)}
-                type="button"
-                customBlock="modal"
-                customModifier="submit"
-              >
-                Submit
-              </Button>
-            </div>
-            <div className="modal__button-container">
-              <Button
-                onClick={() => setShowModal(!showModal)}
-                type="button"
-                customBlock="modal"
-                customModifier="close"
-              >
-                Return
-              </Button>
-            </div>
-          </form>
-        </Modal>
+        <Modal setShowModal={setShowModal} showModal={showModal} />
       ) : null}
       <Card
         services={starterServices}
@@ -113,9 +59,7 @@ export const AppUI = ({
           onClick={() => {
             setShowModal(!showModal);
           }}
-          // card
-          // starter
-          type={'button'}
+          type="button"
           customBlock="card"
           customModifier="starter"
         >
@@ -132,9 +76,7 @@ export const AppUI = ({
           onClick={() => {
             setShowModal(!showModal);
           }}
-          // card
-          // pro
-          type={'button'}
+          type="button"
           customBlock="card"
           customModifier="pro"
         >
@@ -142,7 +84,7 @@ export const AppUI = ({
         </Button>
       </Card>
       <Card
-        services={services}
+        services={teamServices}
         imgObj={teamsImgObj}
         planName="teams"
         price="$99"
@@ -151,9 +93,7 @@ export const AppUI = ({
           onClick={() => {
             setShowModal(!showModal);
           }}
-          // card
-          // teams
-          type={'button'}
+          type="button"
           customBlock="card"
           customModifier="teams"
         >

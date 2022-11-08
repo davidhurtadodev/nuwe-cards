@@ -1,9 +1,7 @@
 import classNames from 'classnames';
 
-interface PlanWrapperProps {
-  planName: string;
-  price: string;
-}
+import { PlanWrapperProps } from '../../shared/interface/PlanWrapperProps.interface';
+import './PlanWrapper.scss';
 
 export const PlanWrapper = ({ planName, price }: PlanWrapperProps) => {
   const cardPlanWrapperClasses = classNames('plan-wrapper card__plan-wrapper', {
