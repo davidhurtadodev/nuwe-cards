@@ -50,3 +50,5 @@ LinkedIn: https://www.linkedin.com/in/david-hurtado-g
 ## License
 
 [MIT](https://opensource.org/licenses/MIT)
+
+Codefactor:
