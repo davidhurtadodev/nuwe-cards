@@ -5,6 +5,12 @@
   width: 284.33px;
   border-radius: 8px;
   margin: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  &:hover {
+    width: auto;
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.35) 5px 5px 15px;
+  }
   &--starter {
     border-color: #dae9ef;
     padding: 16px 0;
