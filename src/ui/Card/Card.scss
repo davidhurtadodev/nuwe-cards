@@ -1,0 +1,46 @@
+@use '../../mixin.scss' as mixin;
+
+.card {
+  border: 2px solid;
+  width: 284.33px;
+  border-radius: 8px;
+  margin: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  &:hover {
+    width: auto;
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.35) 5px 5px 15px;
+  }
+  &--starter {
+    border-color: #dae9ef;
+    padding: 16px 0;
+  }
+  &--pro {
+    border-color: mixin.$black-color;
+    padding: 40px 0;
+    background-color: mixin.$primary-color;
+  }
+  &--teams {
+    border-color: #dae9ef;
+    padding: 48px 0;
+  }
+
+  &__body-header-container--pro {
+    padding: 0 29.33px 0 40px;
+  }
+  &__body-header-container--starter {
+    padding: 0 16px;
+  }
+  &__body-header-container--teams {
+    padding: 0 21.33px 0 48px;
+  }
+  &__button-container--teams {
+    padding: 0 48px;
+  }
+  &__button-container--starter {
+    padding: 0 16px;
+  }
+  &__button-container--pro {
+    padding: 0 40px;
+  }
+}

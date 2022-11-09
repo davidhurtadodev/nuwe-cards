@@ -1,0 +1,42 @@
+@use '../../mixin.scss' as mixin;
+
+.card__list {
+  list-style-type: none;
+  // padding-left: 10px;
+  margin-bottom: 16px;
+}
+.card__li {
+  position: relative;
+  font-weight: 300;
+  font-size: 14px;
+  margin-bottom: 16px;
+  margin-left: 20px;
+  &:before {
+    content: '';
+    position: absolute;
+    background-image: url(../../assets/icons/Vector.svg);
+    background-size: cover;
+    background-position: center;
+    left: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 11.73px;
+    height: 8.94px;
+  }
+  &-starter--inactive {
+    opacity: 0.2;
+  }
+  &-pro--inactive {
+    opacity: 0.5;
+    color: mixin.$white-color;
+  }
+  &-pro {
+    color: mixin.$white-color;
+  }
+  &-pro::before {
+    background-image: url('../../assets/icons/Vector-white.svg');
+  }
+  &-teams {
+    margin-bottom: 12px;
+  }
+}
