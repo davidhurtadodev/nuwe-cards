@@ -39,7 +39,8 @@ Dentro de un ecosistema en particular, puede haber una forma común de instalar 
 
 ## Roadmap and visuals
 
-Explicación extra, imágenes, wireframes, mockups, GIFs, etc.
+Demo: https://jolly-dolphin-562a8c.netlify.app/
+
 ![alt text](./project.png 'Plan cards')
 
 ## Contact info
