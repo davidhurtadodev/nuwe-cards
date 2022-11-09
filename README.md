@@ -47,8 +47,10 @@ Demo: https://jolly-dolphin-562a8c.netlify.app/
 
 LinkedIn: https://www.linkedin.com/in/david-hurtado-g
 
+## Codefactor
+
+[![CodeFactor](https://www.codefactor.io/repository/github/davidhuertado/nuwe-cards/badge)](https://www.codefactor.io/repository/github/davidhuertado/nuwe-cards)
+
 ## License
 
 [MIT](https://opensource.org/licenses/MIT)
-
-Codefactor:
