@@ -1,11 +1,5 @@
 # Plan Cards
 
-Project_name: utilizar nombres que sean facilmente identificables para personas que puedan llegar a tener interés en ese modulo o que estén buscando algo similar.
-
-> This project consists in three models for plan and pricing cards components.
-
-Define la uilidad básica del modulo para que easí la gente que tenía dudas respecto al título pueda salir de ellas y decidir si seguir leyendo.
-
 ## Background |
 
 The project it's a NUWE challenge to enter the Barcelona Digital Talent 2022 Hackathon
@@ -13,8 +7,6 @@ The project it's a NUWE challenge to enter the Barcelona Digital Talent 2022 Hac
 ## Usage
 
 You have three cards model and a modal when you click in one of the card buttons.
-
-\
 
 ## Installation
 
@@ -33,9 +25,9 @@ Dentro de un ecosistema en particular, puede haber una forma común de instalar 
 
 ## Stack
 
-- Typescript
-- React
-- Sass
+- Typescript: we use Typescript because we think that coding with Typescript help us avoid bugs.
+- React: it helps us creating reusable components and managing app state.
+- Sass: we used for creating modular styling. Also we prefer the SCSS syntax and functionality over native CSS.
 
 ## Roadmap and visuals
 
