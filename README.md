@@ -37,10 +37,6 @@ You have three cards model and a modal when you click in one of the card buttons
 
 LinkedIn: https://www.linkedin.com/in/david-hurtado-g
 
-## Codefactor
-
-[![CodeFactor](https://www.codefactor.io/repository/github/davidhuertado/nuwe-cards/badge)](https://www.codefactor.io/repository/github/davidhuertado/nuwe-cards)
-
 ## License
 
 [MIT](https://opensource.org/licenses/MIT)
